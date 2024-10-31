@@ -56,16 +56,19 @@ $(document).ready(function() {
     //splash screen buttons
     $('#play-game-btn').click(() => game.switchScreen('game-screen'));
 
-
     //game screen buttons
     $('#play-pause-btn').click(() => game.toggleRunning());
     $('#end-game-btn').click(() => game.switchScreen('game-over-screen'));
     $('#final-quit-btn').click(() => game.switchScreen('splash-screen'));
 
-
-
     //game over screen buttons
+    $('#play-again-btn').click(() => game.switchScreen('game-screen'));
+    $('#final-quit-btn').click(() => game.switchScreen('splash-screen'));
 
-
-    //modals
-})
+    //modal handlers
+    $('#more-info-btn').click(() => {
+        $('#setup-modal').modal('hide');
+        $('#gameplay-modal').modal('show');
+    });
+    
+});
