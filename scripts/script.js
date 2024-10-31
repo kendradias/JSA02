@@ -18,6 +18,12 @@ const game = {
         } else {
             $('#header-quit-btn').hide();
             this.isRunning = false;
+        } 
+
+        if (screen === "game-over-screen") {
+            $('#help-btn').hide();
+        } else {
+            $('#help-btn').show();
         }
 
     },
@@ -31,6 +37,7 @@ const game = {
         } else {
             $('#setup-modal').modal('show');
         }
+
     },
 
     //toggle game function
@@ -51,6 +58,9 @@ $(document).ready(function() {
 
 
     //game screen buttons
+    $('#play-pause-btn').click(() => game.toggleRunning());
+    $('#end-game-btn').click(() => game.switchScreen('game-over-screen'));
+    $('#final-quit-btn').click(() => game.switchScreen('splash-screen'));
 
 
 
