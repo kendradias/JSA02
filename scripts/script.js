@@ -24,7 +24,13 @@ const game = {
 
     //show help function
     showHelp: function() {
-
+        if (this.CurrentScreen === 'game-screen') {
+            this.wasRunning = this.isRunningl
+            this.isRunning = false;
+            $('#gameplay-modal').modal('show');
+        } else {
+            $('#setup-modal').modal('show');
+        }
     },
 
     //toggle game function
@@ -37,7 +43,7 @@ const game = {
 //event Listeners
 $(document).ready(function() {
     //header buttons
-
+    $('#help-btn').click(() => game.showHelp())
 
     //splash screen buttons
 
