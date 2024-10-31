@@ -7,6 +7,26 @@
   box-sizing: border-box;
 }
 
+.screen {
+    display: none;
+    padding: 2 rem;
+    height: 100%;
+
+}
+
+.screen-content {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1 rem;
+}
+
+#splash-screen {
+    display: block;
+}
+
 #header-section {
     background-color: pink;
     padding: 40px;
@@ -33,4 +53,5 @@ body {
     background-color: rgb(41, 41, 41);
     background-size: cover;
     font-family: sans-serif;
+    color: white;
   }

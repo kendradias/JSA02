@@ -12,15 +12,14 @@
 </head>
 <body>
     <main>
+        <!--Game Screens and Main Content-->
         <div id="game-board">
             <div id="header-section">
                 <h1>Assignment 02 - Pink</h1>
                 <button id="help-btn" class="btn btn-info">Help</button>
                 <button id="quit-btn" class="btn btn-danger" style="display: none;">Quit</button>
             </div>
-            <div>
-                <h1>Splash</h1>
-            </div>
+            <h1>Splash</h1>
 
             <div id="splash-screen" class="screen">
                 <div class="screen-content">
@@ -45,7 +44,31 @@
                     <button id="game-quit-btn" class="btn btn-danger">Quit</button>
                 </div>
             </div>
-        </div>            
+        </div> 
+        
+        <!--Modals-->
+        <!--Set up Instructions-->
+        <div class="modal fade" id="setup-modal" tabindex="-1">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Setup Instructions</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+
+                    <div class="modal-body">
+                        <p>Here are the instructions to the game..........</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" id="'more-info-btn">More Info</button>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
     </main>    
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" 
     integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" 
