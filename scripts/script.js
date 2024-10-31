@@ -1,6 +1,6 @@
 'use strict';
 
-// game object
+//game object
 const game = {
     isRunning: false,
     wasRunning: false,
@@ -16,7 +16,7 @@ const game = {
         if (screen === 'game-screen') {
             $('#header-quit-btn').show();
         } else {
-            $('#header=quit-btn').hide();
+            $('#header-quit-btn').hide();
             this.isRunning = false;
         }
 
@@ -27,9 +27,26 @@ const game = {
 
     },
 
-    //toggleRunning function
+    //toggle game function
     toggleRunning: function () {
         this.isRunning = !this.isRunning;
         $('#play-pause-btn').text(this.isRunning ? 'Pause' : 'Play');
     }
 };
+
+//event Listeners
+$(document).ready(function() {
+    //header buttons
+
+
+    //splash screen buttons
+
+
+    //game screen buttons
+
+
+    //game over screen buttons
+
+
+    //modals
+})
