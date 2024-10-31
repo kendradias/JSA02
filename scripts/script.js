@@ -1,5 +1,4 @@
 'use strict';
-
 //game object
 const game = {
     isRunning: false,
@@ -9,6 +8,7 @@ const game = {
     //switch screen function
     switchScreen: function(screen) {
         this.currentScreen = screen;
+        console.log(`Current screen is ${screen}`);
         $('.screen').hide();
         $(`#${screen}`).show();
 
@@ -24,8 +24,8 @@ const game = {
 
     //show help function
     showHelp: function() {
-        if (this.CurrentScreen === 'game-screen') {
-            this.wasRunning = this.isRunningl
+        if (this.currentScreen === 'game-screen') {
+            this.wasRunning = this.isRunning;
             this.isRunning = false;
             $('#gameplay-modal').modal('show');
         } else {
@@ -43,12 +43,15 @@ const game = {
 //event Listeners
 $(document).ready(function() {
     //header buttons
-    $('#help-btn').click(() => game.showHelp())
+    $('#help-btn').click(() => game.showHelp());
+    $('#quit-btn').click(() => game.switchScreen('splash-screen'));
 
     //splash screen buttons
+    $('#play-game-btn').click(() => game.switchScreen('game-screen'));
 
 
     //game screen buttons
+
 
 
     //game over screen buttons
