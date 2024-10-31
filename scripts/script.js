@@ -70,5 +70,17 @@ $(document).ready(function() {
         $('#setup-modal').modal('hide');
         $('#gameplay-modal').modal('show');
     });
+
+    $('#gameplay-modal').on('hidden.bs.modal', () => {
+        if (game.currentScreen === 'game-screen') {
+            game.isRunning = game.wasRunning;
+        }
+    });
+
+    $('#setup-modal').on('hidden.bs.modal', () => {
+        if (game.currentScreen === 'game-screen') {
+            game.isRunning = game.wasRunning;
+        }
+    });
     
 });
