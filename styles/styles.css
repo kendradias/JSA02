@@ -5,13 +5,13 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: sans-serif;
 }
 
 .screen {
     display: none;
-    padding: 2 rem;
+    padding: 2rem;
     height: 100%;
-
 }
 
 .screen-content {
@@ -20,14 +20,14 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 1 rem;
+    gap: 1rem;
 }
 
 #splash-screen {
     display: block;
 }
 
-header {
+.header {
     color: black;
     background-color: pink;
     padding: 40px;
@@ -39,7 +39,6 @@ header {
 }
 
 body {
-    font-family: Arial, sans-serif;
     line-height: 1.6;
     display: flex;
     flex-direction: column;
@@ -53,6 +52,5 @@ body {
     background-image: none;
     background-color: rgb(41, 41, 41);
     background-size: cover;
-    font-family: sans-serif;
-    color: darkslategrey;
+    color: rgb(65, 103, 103);
   }
